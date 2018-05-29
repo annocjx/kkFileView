@@ -25,6 +25,7 @@ public class SimpleDocumentFormatRegistry implements DocumentFormatRegistry {
 		documentFormats.add(documentFormat);
 	}
 
+	@Override
 	public DocumentFormat getFormatByExtension(String extension) {
         if (extension == null) {
             return null;
@@ -39,6 +40,7 @@ public class SimpleDocumentFormatRegistry implements DocumentFormatRegistry {
 		return null;
 	}
 
+	@Override
 	public DocumentFormat getFormatByMediaType(String mediaType) {
         if (mediaType == null) {
             return null;
@@ -52,6 +54,7 @@ public class SimpleDocumentFormatRegistry implements DocumentFormatRegistry {
 	    return null;
 	}
 
+	@Override
 	public Set<DocumentFormat> getOutputFormats(DocumentFamily family) {
 	    Set<DocumentFormat> formats = new HashSet<DocumentFormat>();
         for (DocumentFormat format : documentFormats) {
